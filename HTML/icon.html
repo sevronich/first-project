@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table</title>
+
+    <style>
+      table {
+        width: 90vw;
+        height: 30vh;
+        margin: auto;
+        border-collapse: collapse;
+        text-align: center;
+      }
+
+      tr:nth-child(odd) {
+        background-color: #84afa0;
+      }
+      td:first-child {
+        background-color: #9146dc;
+        width: 40px;
+        height: 40px;
+      }
+
+      td:nth-child(3) {
+        background-color: #b48888;
+        &:hover {
+          transform: scale(0.9s);
+        }
+      }
+
+      td:not(not-lina) {
+        background-color: #27b7d0;
+      }
+      .alin-modal {
+        background-color: rgba(236, 16, 16, 0.5);
+        border-radius: 2px solid rgb(214, 31, 31);
+        border: 5px;
+      }
+      button {
+        background-color: transparent;
+        border: none;
+
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="alin-modal" popover="auto" id="pop-alin">
+      <p>
+        name: Alin <br />
+        gender: male <br />
+        possition: developer <br />
+        experience: 5 years
+      </p>
+    </div>
+
+    <!--table  -->
+
+    <table border="1">
+      <!-- thead -->
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>possition</th>
+          <th>Experience</th>
+        </tr>
+      </thead>
+
+      <!-- tbody -->
+      <tbody>
+        <tr>
+          <td><button popovertarget="pop-alin">Alin</button></td>
+          <td>Male</td>
+          <td>Developer</td>
+          <td>5 years</td>
+        </tr>
+
+        <tr>
+          <td>Dai Ana</td>
+          <td>Female</td>
+          <td>Designer</td>
+          <td>5 years</td>
+        </tr>
+
+        <tr>
+          <td class="not-lina">Lina</td>
+          <td>Female</td>
+          <td>Designer</td>
+          <td>10 years</td>
+        </tr>
+
+        <tr>
+          <td>Zilong</td>
+          <td>Male</td>
+          <td>Web Developer</td>
+          <td>5 years</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

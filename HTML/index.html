@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- កំណត់ encoding ឲ្យគេហទំព័រអានអក្សរបានត្រឹមត្រូវ -->
+    <meta charset="UTF-8">
+
+    <!-- ធ្វើឲ្យ responsive លើ mobile / tablet / desktop -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ចំណងជើងបង្ហាញលើ browser tab -->
+    <title>Professional HTML Form</title>
+</head>
+<body>
+
+    <!-- 
+      FORM ELEMENT
+      - ប្រើសម្រាប់ប្រមូលទិន្នន័យពីអ្នកប្រើ
+      - action  : ទីតាំងផ្ញើ data
+      - method  : វិធីផ្ញើ data (GET / POST)
+    -->
+    <form action="./day1.html" method="get">
+
+        <!-- ================= TEXT INPUT ================= -->
+        <label for="name">Name</label>
+        <!--
+          type="text"
+          - បញ្ចូលអក្សរធម្មតា
+          - required = ត្រូវបញ្ចូល មិនអាចទទេ
+        -->
+        <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="SRNCSH"
+            required>
+        <br><br>
+
+        <!-- ================= EMAIL INPUT ================= -->
+        <label for="email">Email</label>
+        <!--
+          type="email"
+          - បញ្ចូលអ៊ីមែល
+          - browser ពិនិត្យ format (@)
+        -->
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@example.com"
+            required>
+        <br><br>
+
+        <!-- ================= PASSWORD INPUT ================= -->
+        <label for="password">Password</label>
+        <!--
+          type="password"
+          - លាក់អក្សរ
+          - pattern = កំណត់លក្ខខណ្ឌ password
+            • មានលេខ
+            • មានអក្សរតូច
+            • មានអក្សរធំ
+            • ប្រវែង ≥ 8
+        -->
+        <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="********"
+            required
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+        <br><br>
+
+        <!-- ================= DATE INPUT ================= -->
+        <label for="dob">Date of Birth</label>
+        <!--
+          type="date"
+          - ជ្រើសកាលបរិច្ឆេទពី calendar
+        -->
+        <input
+            type="date"
+            id="dob"
+            name="dob">
+        <br><br>
+
+        <!-- ================= RADIO INPUT ================= -->
+        <p>Gender</p>
+        <!--
+          type="radio"
+          - ជ្រើសបានតែមួយ
+          - name ត្រូវដូចគ្នា
+        -->
+        <input type="radio" id="gender-male" name="gender" value="male">
+        <label for="gender-male">Male</label>
+
+        <input type="radio" id="gender-female" name="gender" value="female">
+        <label for="gender-female">Female</label>
+
+        <input type="radio" id="gender-other" name="gender" value="other">
+        <label for="gender-other">Other</label>
+        <br><br>
+
+        <!-- ================= CHECKBOX INPUT ================= -->
+        <p>Hobbies</p>
+        <!--
+          type="checkbox"
+          - ជ្រើសបានច្រើន
+          - name[] = ផ្ញើជា array
+        -->
+        <input type="checkbox" id="hobby-reading" name="hobbies[]" value="reading">
+        <label for="hobby-reading">Reading</label>
+
+        <input type="checkbox" id="hobby-playing" name="hobbies[]" value="playing">
+        <label for="hobby-playing">Playing</label>
+
+        <input type="checkbox" id="hobby-singing" name="hobbies[]" value="singing">
+        <label for="hobby-singing">Singing</label>
+        <br><br>
+
+        <!-- ================= FILE INPUT ================= -->
+        <label for="file">Upload File</label>
+        <!--
+          type="file"
+          - Upload ឯកសារ
+          - accept = អនុញ្ញាតតែ image
+        -->
+        <input
+            type="file"
+            id="file"
+            name="file"
+            accept="image/png, image/jpeg">
+        <br><br>
+
+        <!-- ================= COLOR INPUT ================= -->
+        <label for="color">Choose Color</label>
+        <!--
+          type="color"
+          - ជ្រើសពណ៌
+        -->
+        <input
+            type="color"
+            id="color"
+            name="color"
+            value="#ff0000">
+        <br><br>
+
+        <!-- ================= RANGE INPUT ================= -->
+        <label for="range">Choose a number</label>
+        <!--
+          type="range"
+          - Slider
+          - min / max = ចន្លោះតម្លៃ
+        -->
+        <input
+            type="range"
+            id="range"
+            name="range"
+            min="0"
+            max="100">
+        <br><br>
+
+        <!-- ================= AGREEMENT ================= -->
+        <input
+            type="checkbox"
+            id="terms"
+            name="terms"
+            required>
+        <label for="terms">I agree to the terms and conditions</label>
+        <br><br>
+        <!-- ================= search =================  -->
+        <label for="search">Search</label>
+        <input
+            type="search"
+            id="search"
+            name="search">
+        <br><br>
+        <!-- ================= datalist ================= -->
+        <label for="browser">Choose a browser from the list:</label>
+        <input list="browsers" name="browser" id="browser">
+        <datalist id="browsers">
+            <option value="Chrome">
+            <option value="Firefox">
+            <option value="Safari">
+            <option value="Edge">
+        </datalist>
+        <br><br>
+        <!-- ================= select ================= -->
+        <label for="country">Country</label>
+        <select id="country" name="country">
+            <option value="usa">United States</option>
+            <option value="canada">Canada</option>
+            <option value="uk">United Kingdom</option>
+        </select>
+        <br><br>
+        <!-- ================= select multiple ================= -->
+        <label for="languages">Languages</label>
+        <select id="languages" name="languages[]" multiple>
+            <option value="english">English</option>
+            <option value="french">French</option>
+            <option value="spanish">Spanish</option>
+        </select>
+        <br><br>
+        <!-- ================= optgroup ================= -->
+        <label for="category">Category</label>
+        <select id="category" name="category">
+            <optgroup label="Web Development">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="javascript">JavaScript</option>
+            </optgroup>
+            <optgroup label="Mobile Development">
+                <option value="android">Android</option>
+                <option value="ios">iOS</option>
+            </optgroup>
+        </select>
+        <br><br>
+        <!-- ================= hidden ================= -->
+        <input type="hidden" name="secret" value="myonlypassword">
+        <br><br>
+        <!-- ================= telephone ================= -->
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone">
+        <br><br>
+        <!-- ================= textarea ================= -->
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea>
+        <br><br>
+        <!-- ================= RESET BUTTON ================= -->
+        <!-- 
+          type="reset"
+          - កំណត់ប៊ូតុង reset ដើម្បីសម្អាតទិន្នន័យ
+        -->
+        <input type="reset" value="Reset">
+        <br><br>
+        <!-- ================= BUTTON ================= -->
+        <!-- 
+          type="button"
+          - កំណត់ប៊ូតុងធម្មតា
+        -->
+        <input type="button" value="Button">
+        <br><br>
+
+        <!-- ================= SUBMIT BUTTON ================= -->
+        <!--
+          type="submit"
+          - បញ្ជូន data ទៅ server
+        -->
+        <input type="submit" value="Submit">
+
+    </form>
+
+</body>
+</html>

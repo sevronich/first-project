@@ -1,0 +1,23 @@
+:root   {
+    /* color */
+    --primary-color:#333
+    --secondary-color:#00ff00;
+    --accent-color:#ff0000;
+    /* background-color */
+    --bg-primary-color:#000fff;
+    --bg-secondary-color:#00fff0;
+   /* action-color */
+    --action-color:#ff00ff;
+    --warning-color:#ffff00;
+    --error-color:#ff0000;
+    /* font */
+    --english-font:Arial, Helvetica, sans-serif;
+    --khmer-font:Khmer OS, sans-serif;
+    /* layout */
+    --grid-column:repeat(4,200px);
+    --grid-row:repeat(3,100px);
+    --grid-gap:10px;
+    --grid-template-columns:repeat(4,1fr);
+    --grid-template-rows:repeat(3,1fr);
+    
+}

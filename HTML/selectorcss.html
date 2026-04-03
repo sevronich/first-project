@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector CSS</title>
+
+    <style>
+         /* grouping selector */
+         h5, h6 {
+            color: blue;
+         }
+
+            /* if we don't use grouping selector */
+            /* h5 {
+                color: blue;
+            }
+            h6 {
+                color: blue;
+            } */
+
+             /* universal selector */
+             /* * {
+                color: red;
+             } */
+
+             /* class selector */
+             .chilldren {
+                color: green;
+             }
+
+             /* id selector */
+             #chilldren2 {
+                color: orange;
+             }
+             /* combinator selector */
+             div h5,h6 {
+                color: purple;
+             }
+             /* combinator (>) */
+                ul > li > a {
+                    color: pink;
+                }
+
+            /* combinator (+) */
+                h5 + h6 {
+                    color: brown;
+                }
+            /* combinator (~) */
+                h5 ~ h6 {
+                    color: gray;
+                }
+
+                /* pseudo class */
+                a:hover {
+                    color: red;
+                }
+                a:active {
+                    color: green;
+                }
+                a:visited {
+                    color: blue;
+                }
+                /* pseudo element */
+                h5::before {
+                    content: "Before ";
+                    color: black;
+                }
+                h5::after {
+                    content: " After";
+                    color: black;
+                }
+
+    </style>
+</head>
+<body>
+
+
+    <h1>Selector CSS</h1>
+     <!-- 
+    <section> parent of div
+        <div> children of section and parent of span
+             <span> children of div and parent of h6 and grandchildren of section
+                <h6>Grate grant children</h6> 
+            </span>
+        </div>
+      </section>
+     -->
+     
+     <h5>
+        Chilldren
+     </h5>
+     <h6 style="font-size: 40px;">Chilldren 2</h6>
+     <ul>
+        <li>
+            <a href="">Home</a>
+        </li>
+        <li>
+            <a href="">About</a>
+        </li>
+        <li>
+            <a href="">Contact</a>
+        </li> 
+        <li>
+            <a href="">Q&A</a>
+        </li>  
+
+
+
+     </ul>
+
+
+
+
+     
+
+     
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
